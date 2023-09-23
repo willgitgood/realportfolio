@@ -1,0 +1,134 @@
+nav {
+    background: #659999;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f4791f, #659999);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f4791f, #659999); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    justify-content: space-between;
+    background-color: inherit;
+ max-width: inherit;
+ color: black;
+ padding: 1rem 0;
+ align-items: center;
+}
+
+.nav-container h1{
+font-size: 25px;
+text-transform: uppercase;
+font-style: italic;
+}
+
+.nav-container span:nth-child(1) {
+    font-size: 15px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-menu a {
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0 4px;
+}
+
+.nav-menu a:hover{
+    color: beige;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-7px);
+    
+    
+}
+
+.nav-right {
+    display: flex;
+    /* gap: 2rem; */
+    /* padding-left: 0.3rem; */
+}
+
+.nav-container button{
+    background-color: #659999;
+    color: black;
+    border: 2rem;
+    padding: 0.5rem 2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.nav-container button:hover {
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-7px);
+}
+
+.bar {
+    background-color: white;
+    display: block;
+    width: 23px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger{
+    display: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+      position: fixed;
+      top: 4rem;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      flex-direction: column;
+      background: -webkit-linear-gradient(to left, #f4791f, #659999);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f4791f, #659999);
+      align-items: center;
+      transition: 0.3s;  
+      right: -100%;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu a {
+        padding: 1.5rem;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        right: 25px;
+        /* padding-right: 2rem; */
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hire-me {
+        display: none;
+    }
+}

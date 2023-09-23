@@ -1,0 +1,28 @@
+.footer {
+    background-color: rgb(156, 201, 240);
+    max-width: inherit;
+    padding: 1rem 0;
+    border-top: black solid;
+}
+
+.footer-container {
+    width: 89%;
+    margin: auto;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
