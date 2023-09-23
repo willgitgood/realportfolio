@@ -9,9 +9,10 @@ const Divider = () => {
             Active U.S. Secret Security Clearance
           </h1>
         </div>
-        <div className='pike'>
-          |
-        </div>
+         <span className='pike'>
+           |
+        
+       </span>
 
         <div>
           <h1>
@@ -19,9 +20,10 @@ const Divider = () => {
           </h1>
         </div>
 
-        <div className='pike'>
-          |
-        </div>
+        <span className='pike'>
+           |
+        
+       </span>
         <div>
           <h1>
             Full Stack Web Devloper

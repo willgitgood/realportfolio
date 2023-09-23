@@ -1,10 +1,19 @@
 "use client";
 
 import './Navbar.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(false)
+
+    useEffect(() => {
+        if (openMenu) {
+            document.body.classList.add("no-scroll");
+        }else{
+            document.body.classList.remove("no-scroll");
+        }
+    }, [openMenu])
 
     const menuHandler = () => {
         setOpenMenu(!openMenu);
@@ -17,14 +26,14 @@ const Navbar = () => {
         </h1>
 
         <ul className={openMenu ? "nav-menu active" : "nav-menu "}>
-            <a href="/"><li>Home</li></a>
-            <a href="./Projects"><li>Projects</li></a>
-            <a href="/"><li>About</li></a>
-            <a href="/"><li>Contact</li></a>
+       <li> <Link href="/Home">Home</Link></li>
+            <Link href="/Projects"><li>Projects</li></Link>
+            <a href="/About"><li>About</li></a>
+            <a href="/Contact"><li>Contact</li></a>
         </ul>
         
         <div className="nav-right">
-    <button>
+    <button className='hire-me'>
         Hire Me
     </button>
 

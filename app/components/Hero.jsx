@@ -16,7 +16,7 @@ const Hero = () => {
             <div className="hero-container">
                 <div className="hero-heading">
                     <h1>
-                        Greetings, I'm Will <br /> I'm an IT professional and this is my <span>{text}</span>
+                        Welcome to my website. My name is Will.<br /> I'm an IT professional, and this is my <span>{text}</span>
                     </h1>
                     <div className="hero-buttons">
                         <button>Contact</button>

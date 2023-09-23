@@ -1,0 +1,38 @@
+.about{
+    max-width: fit-content;
+    height: fit-content;
+    background-color: aliceblue;
+    padding: 2rem 0;
+}
+
+.about-container{
+    width: 100%;
+    margin: auto;
+    background-color: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    flex-direction: column;
+    padding: 0 2rem 0 2rem;
+}
+
+.about h1{
+    width: 100%;
+    text-align: center;
+}
+
+.about-text p{
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px){
+
+    .about-container{
+        padding: 0 2rem 0 2rem;
+    }
+
+}

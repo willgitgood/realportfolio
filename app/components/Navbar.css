@@ -2,20 +2,20 @@ nav {
     background: #659999;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #f4791f, #659999);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #f4791f, #659999); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-     
+    width: 100%;
 }
 
 .nav-container {
- background-color: inherit;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    justify-content: space-between;
+    background-color: inherit;
+ max-width: inherit;
  color: black;
  padding: 1rem 0;
- width: 89%;
- margin: auto;
- display: flex;
  align-items: center;
- justify-content: space-between;
- max-width: 1500px;
 }
 
 .nav-container h1{
@@ -50,7 +50,8 @@ font-style: italic;
 
 .nav-right {
     display: flex;
-    gap: 2rem;
+    /* gap: 2rem; */
+    /* padding-left: 0.3rem; */
 }
 
 .nav-container button{
@@ -81,11 +82,17 @@ font-style: italic;
     display: none;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 @media only screen and (max-width: 768px) {
     .nav-menu {
       position: fixed;
       top: 4rem;
       width: 100%;
+      height: 100%;
+      justify-content: center;
       flex-direction: column;
       background: -webkit-linear-gradient(to left, #f4791f, #659999);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #f4791f, #659999);
@@ -105,6 +112,9 @@ font-style: italic;
     .hamburger {
         display: block;
         cursor: pointer;
+        position: relative;
+        right: 25px;
+        /* padding-right: 2rem; */
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -116,5 +126,9 @@ font-style: italic;
 
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hire-me {
+        display: none;
     }
 }
